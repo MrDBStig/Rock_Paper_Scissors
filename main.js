@@ -11,7 +11,6 @@ let roundWinner;
 // **************************************
 
 // Single round
-
 const playRound = function (playerSelection, computerSelection) {
   if (!playerSelection) return;
 
@@ -40,32 +39,16 @@ const playRound = function (playerSelection, computerSelection) {
     roundWinner = "computer";
   }
 
-  return roundWinner;
+  updateScoreMessage(roundWinner, playerSelection, computerSelection);
 };
 
 // Returns randomly selected value (simulation computer's choice)
-const computerPlay = function () {
-  const randomChoiceKey = Math.floor(Math.random() * 3);
+const getRandomChoice = function () {
+  let randomChoiceKey = Math.floor(Math.random() * 3);
   return choices[randomChoiceKey];
 };
 
-// Function to let user choose option
-const userChoice = function () {
-  return prompt(`Please type correctly. Case doesn't matter
-Choose one option: rock, paper or scissors.
-  `).toLowerCase();
-};
-
-// Game algorythm
-const game = function () {
-  const player = userChoice(); // Getting choice from user
-  const computer = computerPlay(); // Generating random computer choice
-  playRound(player, computer); // Playing 1 round of a game
-
-  // Announcing winner of a round
-  return roundWinner === "tie" ? `It's a tie!` : `${roundWinner} wins!`;
-};
-
+// Setting up 5 score max for each player
 const isGameOver = function () {
   return playerScore === 5 || computerScore === 5;
 };
