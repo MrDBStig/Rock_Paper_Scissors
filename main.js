@@ -66,6 +66,10 @@ const game = function () {
   return roundWinner === "tie" ? `It's a tie!` : `${roundWinner} wins!`;
 };
 
+const isGameOver = function () {
+  return playerScore === 5 || computerScore === 5;
+};
+
 // ************************************
 // **************** UI ****************
 // ************************************
