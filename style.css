@@ -3,6 +3,8 @@
   --color-gold: #eaab1f;
   --color-black: #111720;
   --color-dark-grey: #222831;
+  --dark-hover: #4a4f57;
+  --dark-active: #5b5f68;
 }
 
 html {
@@ -117,6 +119,27 @@ section {
   cursor: pointer;
 }
 
+.btn-restart {
+  padding: 2rem 4rem;
+  border: none;
+  background: rgba(221, 221, 221, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+}
+
+.btn:hover {
+  background-color: var(--dark-hover);
+}
+
+.btn:active {
+  background-color: var(--dark-active);
+}
+
 .footer {
   color: var(--color-light);
   font-size: 1.6rem;
@@ -135,9 +158,9 @@ section {
   z-index: 1;
   top: 50%;
   left: 50%;
-  width: 30rem;
-  padding: 3rem;
-  border-radius: 9px;
+  max-width: 50rem;
+  padding: 6rem 3rem;
+  border-radius: 11px;
   background-color: var(--color-dark-grey);
   text-align: center;
   font-size: 3rem;
@@ -147,6 +170,12 @@ section {
   user-select: none;
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
+  color: var(--color-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .modal.active {
@@ -156,12 +185,6 @@ section {
 .modal-title {
   font-size: 4rem;
   font-weight: bold;
-}
-
-.btn-restart {
-  padding: 1rem 2rem;
-  margin-top: 2.5rem;
-  margin-bottom: 1.5rem;
 }
 
 .overlay {
