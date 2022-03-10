@@ -6,7 +6,12 @@ let playerScore = 0;
 let computerScore = 0;
 let roundWinner;
 
+// **************************************
+// **************** GAME ****************
+// **************************************
+
 // Single round
+
 const playRound = function (playerSelection, computerSelection) {
   if (!playerSelection) return;
 
@@ -61,6 +66,6 @@ const game = function () {
   return roundWinner === "tie" ? `It's a tie!` : `${roundWinner} wins!`;
 };
 
-for (let i = 0; i < 5; i++) {
-  console.log(game());
-}
+// ************************************
+// **************** UI ****************
+// ************************************
