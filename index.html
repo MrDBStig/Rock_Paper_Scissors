@@ -21,8 +21,54 @@
     </header>
 
     <main class="main">
-      <div class="container"></div>
+      <div class="container">
+        <section class="description">
+          <h2 class="description-title">Choose your weapon</h2>
+          <p class="description-subtitle">
+            First player to score 5 points wins
+          </p>
+        </section>
+
+        <section class="scoreboard">
+          <div class="scores-container">
+            <div class="scorebox">
+              <div class="sign" id="player-sign">❔</div>
+              <p class="score" id="player-score">Player: 0</p>
+            </div>
+            <div class="scorebox">
+              <div class="sign" id="computer-sign">❔</div>
+              <p class="score" id="computer-score">Computer: 0</p>
+            </div>
+          </div>
+
+          <div class="buttons">
+            <button class="btn" id="rock">
+              <div class="sign">✊</div>
+            </button>
+            <button class="btn" id="paper">
+              <div class="sign">✋</div>
+            </button>
+            <button class="btn" id="scissors">
+              <div class="sign">✌</div>
+            </button>
+          </div>
+        </section>
+      </div>
     </main>
+    <footer class="footer">
+      Copyright ©
+      <script>
+        document.write(new Date().getFullYear());
+      </script>
+      MrDBStig
+    </footer>
+
+    <div class="modal" id="endgameModal">
+      <p class="modal-title" id="endgameMsg"></p>
+      <button class="btn btn-restart" id="restartBtn">Play again</button>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
     <script src="main.js"></script>
   </body>
 </html>
